@@ -1,4 +1,6 @@
-exports.handler = async (event, context) => {
+import { Handler } from '@netlify/functions'
+
+const handler: Handler = async (event, context) => {
 
     return {
         statusCode: 200,
@@ -9,3 +11,5 @@ exports.handler = async (event, context) => {
     }
 
 }
+
+export { handler }
