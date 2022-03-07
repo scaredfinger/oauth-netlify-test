@@ -6,7 +6,8 @@ const handler: Handler = async (event, context) => {
     return {
         statusCode: 200,
         headers: {
-            'X-Execution-Date': new Date().toISOString()
+            'X-Execution-Date': new Date().toISOString(),
+            'Set-Cookie': cookie.serialize('Sample', 'Sample value')
         },
         body: `
             <html>
