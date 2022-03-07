@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/scaredfinger/oauth-netlify-test#readme",
   "dependencies": {
-    "@netlify/functions": "^1.0.0"
+    "@netlify/functions": "^1.0.0",
+    "@types/cookie": "^0.4.1",
+    "cookie": "^0.4.2",
+    "simple-oauth2": "^4.3.0"
   }
 }

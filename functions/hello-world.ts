@@ -1,4 +1,5 @@
 import { Handler } from '@netlify/functions'
+import cookie from 'cookie'
 
 const handler: Handler = async (event, context) => {
 
@@ -7,7 +8,15 @@ const handler: Handler = async (event, context) => {
         headers: {
             'X-Execution-Date': new Date().toISOString()
         },
-        body: 'Hello world'
+        body: `
+            <html>
+                <body>
+                    <pre>
+                    ${ JSON.stringify(event) }
+                    </pre>
+                </body>
+            </html>        
+        `
     }
 
 }
